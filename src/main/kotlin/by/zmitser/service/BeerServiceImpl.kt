@@ -8,7 +8,7 @@ import java.util.*
 import javax.inject.Singleton
 
 @Singleton
-class BeerServiceImpl() : BeerService {
+class BeerServiceImpl : BeerService {
     private val logger: Logger = KotlinLogging.logger { }
     override fun save(beer: BeerDto): BeerDto = BeerDto(UUID.randomUUID(), "", "");
     override fun update(id: UUID, beer: BeerDto): BeerDto {

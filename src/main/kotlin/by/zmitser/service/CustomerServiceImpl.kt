@@ -7,14 +7,14 @@ import java.util.*
 import javax.inject.Singleton
 
 @Singleton
-class CustomerServiceImpl(private val logger: Logger = KotlinLogging.logger { }) : CustomerService {
-
+class CustomerServiceImpl : CustomerService {
+    private val logger: Logger = KotlinLogging.logger { }
     override fun save(customer: CustomerDto): CustomerDto {
         return CustomerDto(UUID.randomUUID(), "Robert")
     }
 
     override fun update(id: UUID, customer: CustomerDto) {
-        TODO("Not implemented yet")
+        logger.info("Update a beer...")
 
     }
 
