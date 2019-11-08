@@ -24,7 +24,7 @@ class BeerController(private val service: BeerService) {
     }
 
     @Put("/{id}")
-    fun update(@PathVariable id: UUID, beer: BeerDto):HttpResponse<Any>{
+    fun update(@PathVariable id: UUID, beer: BeerDto): HttpResponse<Any> {
         service.update(id, beer)
         return HttpResponseFactory.INSTANCE.status(NO_CONTENT)
     }

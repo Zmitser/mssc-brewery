@@ -2,6 +2,6 @@ package by.zmitser.web.model
 
 import java.util.*
 
-data class CustomerDto(val id: UUID?, val name: String?) {
+data class CustomerDto(var id: UUID?, var name: String?) {
     constructor() : this(null, null)
 }
