@@ -5,7 +5,8 @@ import by.zmitser.web.model.BeerDto
 import org.mapstruct.Mapper
 
 @Mapper(
-        componentModel = "jsr330"
+        componentModel = "jsr330",
+        uses = [DateMapper::class]
 )
 interface BeerMapper {
 
